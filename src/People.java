@@ -5,24 +5,18 @@ public class People {
     String job;
 
     public People(int yearOfBirth, String name, String town, String job) {
-        if (yearOfBirth >= 1930) {
-            this.yearOfBirth = yearOfBirth;
-        } else if (yearOfBirth < 0) {
-            this.yearOfBirth = Math.abs(yearOfBirth);
-        } else if (yearOfBirth >= 2022) {
-            System.out.println("*Не корректно указанные данные*");
-        } else {
-            this.yearOfBirth = 0;
-        }
-        if (name == null) {
+         if (yearOfBirth < 0) {
+             this.yearOfBirth = 0;
+         }
+        if (name == null || name.isEmpty()) {
             name = "*Информация не указана*";
         }
         this.name = name;
-        if (town == null) {
+        if (town == null || town.isEmpty()) {
             town = "*Информация не указана*";
         }
         this.town = town;
-        if (job == null) {
+        if (job == null || job.isEmpty()) {
             job = "*Информация не указана*";
         }
         this.job = job;

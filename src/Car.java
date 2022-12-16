@@ -8,11 +8,11 @@ public class Car {
 
     Car(String brand, String model, double engineVolume, String color, int productionYear, String productionCountry) {
 
-        if (brand == null) {
+        if (brand == null || brand.isEmpty()) {
             brand = "default";
         }
         this.brand = brand;
-        if (model == null) {
+        if (model == null || model.isEmpty()) {
             model = "default";
         }
         this.model = model;
@@ -20,7 +20,7 @@ public class Car {
             engineVolume = 1.5;
         }
         this.engineVolume = engineVolume;
-        if (color == "" && color == null) {
+        if (color.isEmpty() && color == null) {
             color = "Белый";
         }
         this.color = color;
@@ -28,7 +28,7 @@ public class Car {
             productionYear = 2000;
         }
         this.productionYear = productionYear;
-        if (productionCountry == null) {
+        if (productionCountry == null || productionCountry.isEmpty()) {
             productionCountry = "default";
         }
         this.productionCountry = productionCountry;
